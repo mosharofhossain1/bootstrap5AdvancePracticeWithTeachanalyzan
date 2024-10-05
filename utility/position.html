@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Position </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .main_div {
+            border: 2px solid red;
+            width: 500px;
+            height: 500px;
+        }
+
+        .main_div div {
+            background-color: yellow;
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="text-center">Bootstrap Position</h1>
+
+    <div class="container">
+        <div class="position-relative main_div">
+            <div class="position-absolute top-0 start-0"></div>
+            <div class="position-absolute top-0 end-0"></div>
+            <div class="position-absolute top-50 start-50"></div>
+            <div class="position-absolute bottom-50 end-50"></div>
+            <div class="position-absolute bottom-0 start-0"></div>
+            <div class="position-absolute bottom-0 end-0"></div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <h1 class="mb-5">Center elements </h1>
+        <div class="position-relative main_div">
+            <div class="position-absolute top-0 start-0 translate-middle"></div>
+            <div class="position-absolute top-0 start-50 translate-middle"></div>
+            <div class="position-absolute top-0 start-100 translate-middle"></div>
+            <div class="position-absolute top-50 start-0 translate-middle"></div>
+            <div class="position-absolute top-50 start-50 translate-middle"></div>
+            <div class="position-absolute top-50 start-100 translate-middle"></div>
+            <div class="position-absolute top-100 start-0 translate-middle"></div>
+            <div class="position-absolute top-100 start-50 translate-middle"></div>
+            <div class="position-absolute top-100 start-100 translate-middle"></div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+
+        <div class="position-relative main_div">
+            <div class="position-absolute top-0 start-0"></div>
+            <div class="position-absolute top-0 start-50 translate-middle-x"></div>
+            <div class="position-absolute top-0 end-0"></div>
+            <div class="position-absolute top-50 start-0 translate-middle-y"></div>
+            <div class="position-absolute top-50 start-50 translate-middle"></div>
+            <div class="position-absolute top-50 end-0 translate-middle-y"></div>
+            <div class="position-absolute bottom-0 start-0"></div>
+            <div class="position-absolute bottom-0 start-50 translate-middle-x"></div>
+            <div class="position-absolute bottom-0 end-0"></div>
+        </div>
+        <h1 class="mt-5">Exapmles</h1>
+        <div class="d-flex justify-content-evenly my-4">
+            <button type="button" class="btn btn-primary position-relative">
+                Mails <span
+                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill text-bg-secondary">+99
+                    <span class="visually-hidden">unread messages</span></span>
+            </button>
+
+            <div class="position-relative py-2 px-4 text-bg-secondary border border-secondary rounded-pill">
+                Marker <svg width="1em" height="1em" viewBox="0 0 16 16"
+                    class="position-absolute top-100 start-50 translate-middle mt-1" fill="var(--bs-secondary)"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+                </svg>
+            </div>
+
+            <button type="button" class="btn btn-primary position-relative">
+                Alerts <span
+                    class="position-absolute top-0 start-100 translate-middle badge border border-light rounded-circle bg-danger p-2"><span
+                        class="visually-hidden">unread messages</span></span>
+            </button>
+        </div>
+
+        <div class="position-relative m-4 my-5">
+            <div class="progress" role="progressbar" aria-label="Progress" aria-valuenow="50" aria-valuemin="0"
+                aria-valuemax="100" style="height: 1px;">
+                <div class="progress-bar" style="width: 50%"></div>
+            </div>
+            <button type="button"
+                class="position-absolute top-0 start-0 translate-middle btn btn-sm btn-primary rounded-pill"
+                style="width: 2rem; height:2rem;">1</button>
+            <button type="button"
+                class="position-absolute top-0 start-50 translate-middle btn btn-sm btn-primary rounded-pill"
+                style="width: 2rem; height:2rem;">2</button>
+            <button type="button"
+                class="position-absolute top-0 start-100 translate-middle btn btn-sm btn-secondary rounded-pill"
+                style="width: 2rem; height:2rem;">3</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1 class="text-center">Shadows</h1>
+
+        <div class="shadow-none p-3 mb-5 bg-body-tertiary rounded">No shadow</div>
+        <div class="shadow-sm p-3 mb-5 bg-body-tertiary rounded">Small shadow</div>
+        <div class="shadow p-3 mb-5 bg-body-tertiary rounded">Regular shadow</div>
+        <div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded">Larger shadow</div>
+    </div>
+
+    <div class="container">
+        <p>Width </p>
+        <div class="bg-danger my-2 w-25 p-3">Width 25%</div>
+        <div class="bg-danger my-2 w-50 p-3">Width 50%</div>
+        <div class="bg-danger my-2 w-75 p-3">Width 75%</div>
+        <div class="bg-danger my-2 w-100 p-3">Width 100%</div>
+        <div class="bg-danger my-2 w-auto p-3">Width auto</div>
+
+        <p>Height </p>
+        <div style="height: 100px;">
+            <div class="h-25 d-inline-block bg-danger" style="width: 120px;">Height 25%</div>
+            <div class="h-50 d-inline-block bg-danger" style="width: 120px;">Height 50%</div>
+            <div class="h-75 d-inline-block bg-danger" style="width: 120px;">Height 75%</div>
+            <div class="h-100 d-inline-block bg-danger" style="width: 120px;">Height 100%</div>
+            <div class="h-auto d-inline-block bg-danger" style="width: 120px;">Height auto</div>
+        </div>
+
+        <p>Max-width </p>
+
+        <div style="width: 100%; height: 100px;">
+            <div class="mw-100 bg-danger" style="width: 200%;">Max-width 100%</div>
+        </div>
+
+        <p>Max-height</p>
+        <div style="height: 200px;">
+            <div class="mh-100 bg-danger" style="width: 100px; height: 200px;">Max-height 100%</div>
+        </div>
+
+        <p>Relative the viewPort</p>
+        <div class="min-vw-100 bg-danger">Min-width 100vw</div>
+        <div class="min-vh-100 bg-danger">Min-height 100vh</div>
+        <div class="vw-100 bg-danger">Width 100vw</div>
+        <div class="vh-100 bg-danger">Height 100vh</div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
